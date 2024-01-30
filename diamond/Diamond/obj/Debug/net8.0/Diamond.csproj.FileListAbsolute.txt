@@ -1,0 +1,14 @@
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\bin\Debug\net8.0\Diamond.exe
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\bin\Debug\net8.0\Diamond.deps.json
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\bin\Debug\net8.0\Diamond.runtimeconfig.json
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\bin\Debug\net8.0\Diamond.dll
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\bin\Debug\net8.0\Diamond.pdb
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\obj\Debug\net8.0\Diamond.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\obj\Debug\net8.0\Diamond.AssemblyInfoInputs.cache
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\obj\Debug\net8.0\Diamond.AssemblyInfo.cs
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\obj\Debug\net8.0\Diamond.csproj.CoreCompileInputs.cache
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\obj\Debug\net8.0\Diamond.dll
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\obj\Debug\net8.0\refint\Diamond.dll
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\obj\Debug\net8.0\Diamond.pdb
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\obj\Debug\net8.0\Diamond.genruntimeconfig.cache
+C:\Users\janet\Documents\c sharp\harjoitukset\Diamond\obj\Debug\net8.0\ref\Diamond.dll
