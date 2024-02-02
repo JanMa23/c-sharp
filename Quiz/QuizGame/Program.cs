@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 
 namespace QuizGame
 {
@@ -6,72 +7,74 @@ namespace QuizGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            
 
-            string vastaus;
-            int kokonaispisteet = 0;
+            Kahvi kahviKysymys = new Kahvi();
+            Tee teeKysymys = new Tee();
+            
+
+            
 
             Console.WriteLine("Pelaa tietovisaa! \nValitse aihealue:\n1. Kahvi\n2. Tee\nValinta (1 tai 2): ");
             string aihe = Console.ReadLine();
 
+            
+
+            while (aihe != "1" && aihe != "2")
+            {
+                Console.WriteLine("Pelaa tietovisaa! \nValitse aihealue:\n1. Kahvi\n2. Tee\nValinta (1 tai 2): ");
+                aihe = Console.ReadLine();
+            }
+            
             if (aihe == "1")
             {
-
-
-                Console.WriteLine("Montako mitallista kahvia annostellaan per kuppi?\na) 1\nb) 1,5\nc) 2\nVastaus (a, b tai c): ");
-                vastaus = Console.ReadLine();
-
-                if (vastaus == "a")
-                {
-                    kokonaispisteet++;
-
-                }
-                Console.WriteLine("Pisteet: " + kokonaispisteet);
-
-                Console.WriteLine("Mikä on kofeiinin kemiallinen kaava?\na) H1N1\nb) H2O\nc) C8H10N4O2\nVastaus (a, b tai c): ");
-                vastaus = Console.ReadLine();
-
-                if (vastaus == "c")
-                {
-                    kokonaispisteet++;
-
-                }
-                Console.WriteLine("Pisteet: " + kokonaispisteet);
-
-
-                
-
-            } else if (aihe == "2")
+                kahviKysymys.Kysymykset();
+            } 
+            else if (aihe == "2")
             {
-               
-                Console.WriteLine("Kauanko vihreää irtoteetä pitää hauduttaa?\na) 5 minuuttia\nb) 2 minuuttia\nc) 30 sekuntia\nVastaus (a, b tai c): ");
-                vastaus = Console.ReadLine();
+                teeKysymys.Kysymykset();
+            } 
+          
 
-                if (vastaus == "b")
-                {
-                    kokonaispisteet++;
+            //---------------------------------------//
+            // Tarjoa toista visaa, kun ensimmäinen tehty //
+                    
 
-                }
-                Console.WriteLine("Pisteet: " + kokonaispisteet);
-
-
-                Console.WriteLine("Mikä on sopiva lämpötila vihreän irtoteen hauduttamiseen?\na) 60C\nb) 80C\nc) 100C\nVastaus (a, b tai c): ");
-                vastaus = Console.ReadLine();
-
-                if (vastaus == "a")
-                {
-                    kokonaispisteet++;
-
-                }
-                Console.WriteLine("Pisteet: " + kokonaispisteet);
-
-
-            } else
+            if (teeKysymys.teeVisailuTehty == true)
             {
-                Console.WriteLine("tööt");
+                Console.WriteLine("Pisteet: " + teeKysymys.kokonaispisteet);
+                Console.WriteLine("a) Jatka tietovisaa aiheella kahvi \nb) Lopeta\nVastaus (a tai b):");
+                string vastaus = Console.ReadLine();
+
+                if (vastaus == "a") {
+                    
+                    kahviKysymys.Kysymykset(); }
+
+            }
+            else if (kahviKysymys.kahviVisailuTehty == true)
+            {
+                Console.WriteLine("Pisteet: " + kahviKysymys.kokonaispisteet);
+                Console.WriteLine("a) Jatka tietovisaa aiheella tee \nb) Lopeta\nVastaus (a tai b):");
+                string vastaus = Console.ReadLine();
+
+                if (vastaus == "a") {
+                   
+                    teeKysymys.Kysymykset(); }
+
             }
 
-            try { 
+            //---------------------------------------//
+
+            //---------------------------------------//
+            // Lopputulos
+            Console.Clear();
+            int tulos = kahviKysymys.kokonaispisteet + teeKysymys.kokonaispisteet;
+            Console.WriteLine($"Tietovisa loppui, sait yhteensä {tulos} pistettä.");
+
+            //---------------------------------------//
+
+            try
+            { 
 
             Console.WriteLine("Muunna Celsiusasteet Fahrenheitiksi");
             Console.Write("Celsius: ");
@@ -112,6 +115,8 @@ namespace QuizGame
 
 
         }
+
+        
 
         static void muunninCelsius (double num1)
         {
