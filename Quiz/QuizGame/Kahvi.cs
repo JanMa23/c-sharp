@@ -10,19 +10,10 @@ namespace QuizGame
     {
 
         string vastaus;
-        //int vihjeSaldo = 1;
-        //public int kokonaispisteet = 0;
-        
-        
-
+       
         public bool kahviVisailuTehty = false;
 
-        public void Kysymys1()
-        {
-
-        }
-
-        public void Kysymykset()
+       public void Kysymykset()
         {
 
             //---------------------------------------//

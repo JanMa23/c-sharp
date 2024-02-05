@@ -73,77 +73,11 @@ namespace QuizGame
 
             //---------------------------------------//
 
-            try
-            { 
-
-            Console.WriteLine("Muunna Celsiusasteet Fahrenheitiksi");
-            Console.Write("Celsius: ");
-            double num1 = Convert.ToDouble(Console.ReadLine());
-            muunninCelsius(num1);
-
-            } catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            try { 
-
-            Console.WriteLine("Muunna kilometrit maileiksi\nKM: ");
-            double num1 = Convert.ToDouble(Console.ReadLine());
-            muunninKilometri(num1);
-
-            } catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            try
-            {
-
-            Console.WriteLine("Muunna kilogrammat nauloiksi\nKG: ");
-            double num1 = Convert.ToDouble(Console.ReadLine());
-            muunninKilogramma(num1);
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-
-            Console.ReadLine();
 
 
         }
 
         
-
-        static void muunninCelsius (double num1)
-        {
-            double tulos;
-
-            //muunna celcius fahrenheitiksi
-            tulos = num1 * 1.8 + 32;
-            Console.WriteLine($"{num1} c on {tulos} f");
-
-            
-        }
-
-        static void muunninKilometri(double num1)
-        {
-            double tulos;
-            //muunna kilometri mailiksi
-            tulos = num1 * 0.62;
-            Console.WriteLine($"{num1} km on {tulos} mailia");
-        }
-
-        static void muunninKilogramma(double num1)
-        {
-            double tulos;
-            //muunna kilogrammat nauloiksi
-            tulos = num1 * 2.2;
-            Console.WriteLine($"{num1} kg on {tulos} naulaa (lbs)");
-        }
         
     }
 }
